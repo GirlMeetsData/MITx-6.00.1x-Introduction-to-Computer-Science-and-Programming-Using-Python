@@ -55,3 +55,18 @@ def gcdRecur(a, b):
       return a
     else:
       return gcdRecur(b, a % b)
+      
+def gcdIter(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    # Your code here
+
+    testValue = min(a,b)
+    while testValue > 0:
+        if a%testValue == 0 and b%testValue == 0:
+            return testValue
+        else:
+            testValue -= 1
