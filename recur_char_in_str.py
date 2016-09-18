@@ -14,7 +14,6 @@ def isIn(char, aStr):
     elif len(aStr) == 1 and char != aStr:
         return False
         
-        
     half = len(aStr)//2
     middle = aStr[half]
     
