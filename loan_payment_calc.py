@@ -15,7 +15,7 @@ while month <= 12:
 
 
 # Determining the lowest equal monthly payments needed ot pay off the balance within one year; increments by 10 each time
-# Paste your code into this box
+
 monthlyPaymentRate = 10
 monthlyInterestRate = annualInterestRate/12.0
 orig_balance = balance
