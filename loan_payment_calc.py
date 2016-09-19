@@ -14,7 +14,7 @@ while month <= 12:
     balance = newBalance
 
 
-# Incrementing by 10
+# Determining the lowest equal monthly payments needed ot pay off the balance within one year; increments by 10 each time
 month = 0
 balance = 5000
 annualInterestRate = 0.18
@@ -33,3 +33,6 @@ while month <= 12:
 
     month += 1 
     balance = newBalance
+    
+# Determining the lowest equal monthly payments needed ot pay off the balance within one year; using bisection search
+
