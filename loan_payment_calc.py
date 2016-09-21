@@ -33,3 +33,23 @@ while True:
         
 # Determining the lowest equal monthly payments needed ot pay off the balance within one year; using bisection search
 
+origBalance = balance
+monthlyInterestRate = annualInterestRate/12.0 
+lowerBound = balance/12.0
+upperBound = (balance * (1 + monthlyInterestRate)**12)/12.0
+counter = 0
+while True:
+    balance = origBalance
+    monthlyPaymentRate = float((lowerBound+upperBound)/2)
+    for month in range(12):
+        balance -= monthlyPaymentRate        
+        balance = (monthlyInterestRate * balance) + balance        
+    if balance <= 0.009 and balance >= 0.001:
+        print('Lowest payment: ' + str(round(monthlyPaymentRate,2)))
+        break
+    elif balance < 0: 
+        upperBound = monthlyPaymentRate
+    elif balance > 0:
+        lowerBound = monthlyPaymentRate
+
+
